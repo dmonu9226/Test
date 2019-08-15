@@ -15,19 +15,4 @@ Client
 			dos.writeUTF("=>"+s);
 			System.out.println(dis.readUTF()+"\n");
 		}
-    
-Server
-    ServerSocket listener=new ServerSocket(40005);
-		System.out.println("Server is Ready....");
-		Socket ssoc=listener.accept();
-		
-		InputStream is=ssoc.getInputStream();
-		DataInputStream dis=new DataInputStream(is);
-		OutputStream os=ssoc.getOutputStream();
-		DataOutputStream dos=new DataOutputStream(os);
-		
-		Scanner sc=new Scanner(System.in);
-		for  ( ; ; ) {
-			System.out.println("\n"+dis.readUTF());
-			String s=sc.nextLine();
-			
+ 
